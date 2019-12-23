@@ -5,6 +5,10 @@
 
 The problem is simple: we want to make better purchasing offers to Starbucks' customers. For this, we can use customer's past behaviour to find patterns and try to be more assertive. As given by the Udacity's Starbucks Project Overview, the basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer. In other words, this is a classification problem where the model takes user behaviour data as input and produces a group as output (either previously defined or not).
 
+This has been one of the [most used](https://towardsdatascience.com/how-to-predict-the-success-of-your-marketing-campaign-579fbb153a97) applications of machine learning in the industry, since it provides you with means to save money spent on marketing campaigns by directing content to users who are more likely to convert based on a multitude of characteristics. 
+
+To evaluate the trained models, we'll compare the models based on it's F1-Score. This is a widely used metric to evaluate classification problems. [Aditya Mishra defines](https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234) it as follows:
+> F1 Score is the Harmonic Mean between precision and recall. The range for F1 Score is [0, 1]. It tells you how precise your classifier is (how many instances it classifies correctly), as well as how robust it is (it does not miss a significant number of instances).
 
 ### Datasets and Inputs
 
@@ -65,6 +69,8 @@ For the informational offer, the funnel has this order:
 * transaction
 
 With this, we were able to select features combined with the user profiles.
+
+The final dataset had 13 columns of featues and 1 column regarding the label for success.
 
 ### Modeling
 We used Scikit-learn's framework with cross-validation with 5 folds for all models. We also used train/test split with 80% for train and 20% as test.
